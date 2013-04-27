@@ -10,12 +10,12 @@
 	<meta name="viewport" content="width=device-width">
 	
 	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-	<link rel="stylesheet" type="text/css" href="vendor/jquery.mobile-1.3.1.min.css" media="screen" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
 	
 	<script src="vendor/ContentFlow/contentflow.js"></script>
 	<!-- <script src="vendor/zepto.js"></script> -->
 	<script src="vendor/jquery-2.0.0.min.js"></script>
-	<script src="vendor/jquery.mobile-1.3.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
 </head>
 <body>
 	<div role="main">
@@ -52,18 +52,20 @@
 			</div>
 			
 	        <div class="globalCaption"></div>
-	        <!-- <div class="scrollbar">
-	            <div class="slider"><div class="position"></div></div>
-	        </div> -->
-		</section>
-		
-		<section id="actions">
-			<a href="leaderboard.html" data-role="button" data-theme="b" data-inline="true" data-rel="dialog" data-transition="pop">Leaderboard</a>
-			
-			<a href="rules.html" data-role="button" data-theme="b" data-inline="true" data-rel="dialog" data-transition="pop">Rules</a>
 		</section>
 	</div>
 	
+	<footer>
+		<div data-role="footer">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#" data-icon="home">Home</a></li>
+					<li><a href="leaderboard.html" data-icon="star" data-role="button" data-transition="slide" data-inline="true">Leaderboard</a></li>
+					<li><a href="rules.html" data-icon="grid" data-role="button" data-transition="slide" data-inline="true">Rules</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
 	
 	<script src="main.js"></script>
 </body>
