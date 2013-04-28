@@ -15,6 +15,7 @@
 	<script src="/javascripts/vendor/ContentFlow/contentflow.js"></script>
 	<script src="/javascripts/vendor/jquery-2.0.0.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<script src="/javascripts/vendor/underscore-min.js"></script>
 </head>
 <body>
 	<div role="main">
@@ -26,10 +27,7 @@
 			<div class="loadIndicator"><div class="indicator"></div></div>
 			
 			<div class="flow">
-				<div class="item">
-					<img class="content" src="/images/characters-sample/homer.png" alt="Homer" />
-					<div class="caption">Homer</div>
-				</div>
+				
 			</div>
 			
 	        <div class="globalCaption"></div>
@@ -48,6 +46,12 @@
 		</div>
 	</footer>
 	
+	<script type="text/template" id="character-image-template">
+		<div class="item">
+			<img class="content" src="{{ image }}" alt="{{ name }}" />
+			<div class="caption">{{ name }}</div>
+		</div>
+	</script>
 	<script src="/javascripts/main.js"></script>
 </body>
 </html>
