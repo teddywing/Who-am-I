@@ -4,7 +4,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 section.video {
 	position: relative;
 	padding-bottom: 56.25%;
-	padding-top: 0px;
+	padding-top: 20px;
 	height: 0;
 	z-index: 15;
 }
@@ -20,7 +20,7 @@ section.video video {
 
 #character-select .flow {
 	position: relative;
-	top: -75px;
+	top: -65px;
 }
 
 #character-select .caption {
