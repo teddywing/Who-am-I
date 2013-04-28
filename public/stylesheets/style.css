@@ -62,6 +62,10 @@ body.character-chosen-dialog .ui-body-c {
 	text-align: center;
 }
 
+#character-chosen-content h1.zan-nendeshta {
+	font-size: 1.2em;
+}
+
 #character-chosen-content p {
 	margin-top: 1em;
 	text-align: center;
