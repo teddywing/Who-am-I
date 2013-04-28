@@ -3,5 +3,5 @@ module.exports = function(app) {
 	  , character_images = require('./character-images');
 	
 	app.get('/', index);
-	app.get('/character-images', character_images);
+	app.get('/character-images/:series_id', character_images);
 };

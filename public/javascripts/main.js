@@ -23,7 +23,7 @@
 	var $character_container = $('#character-select .flow');
 	var character_template = _.template($('#character-image-template').html());
 	$.get(
-		'/character-images',
+		'/character-images/8680539',
 		function(response) {
 			var r = JSON.parse(response);
 			

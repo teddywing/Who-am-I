@@ -2,6 +2,7 @@ var request = require('request');
 var config = require('../config');
 
 module.exports = function(req, res) {
+	this.series_id = req.params.series_id;
 	this.data = {};
 	
 	this.data.character_images = {
@@ -49,7 +50,7 @@ module.exports = function(req, res) {
 		});
 	};
 	
-	this.series_request(8680539);
+	this.series_request(this.series_id);
 	
 	this.render = function() {
 		res.render('character-images', this.data);
