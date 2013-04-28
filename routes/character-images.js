@@ -20,19 +20,21 @@ module.exports = function(req, res) {
 				var actor_count = r.cast.length;
 				var the_other = that;
 				for (var i = 0; i < r.cast.length; i++) {
-					if (r.cast[i].role === 'Actor') {
-						that.person_request(r.cast[i].personId, {character_name: r.cast[i].characterName}, function(success) {
-							if (request_count == (r.cast.length - 1)) {
-								the_other.render();
-							}
-							
-							if (!success) {
-								actor_count--;
-							}
-							request_count++;
-						});
-					}
+					that.person_request(r.cast[i].personId, {character_name: r.cast[i].characterName}, function(success) {
+						if (request_count == (actor_count - 1)) {
+							the_other.render();
+						}
+						
+						if (!success) {
+							actor_count--;
+						}
+						request_count++;
+					});
 				}
+			}
+			else {
+				console.log('ERROR:'+error);
+				console.log('STATUS-CODE:'+response.statusCode);
 			}
 		});
 	};
@@ -52,7 +54,6 @@ module.exports = function(req, res) {
 					name: params.character_name,
 					tms_personId: r.personId
 				});
-				console.log(r);
 				
 				callback(true);
 			}
