@@ -13,6 +13,8 @@
 			var showName = showInfo.data.program_data.program_title;
 			
 			VAPP.setTitleBarSubTitle(function(message) {}, showName);
+			
+			VAPP.setLeftButtonTitle(function(message) {}, 'Exit');
 		});
 	}
 	
