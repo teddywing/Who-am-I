@@ -4,8 +4,8 @@
 		coverflow('character-select-container').setup({
 			width: '100%',
 			playlist: playlist,
-			coverheight: 200,
-			textoffset: 30
+			coverheight: 130,
+			textoffset: 68
 		}).on('ready', function() {
 			this.on('click', function() {
 				alert('chosen');

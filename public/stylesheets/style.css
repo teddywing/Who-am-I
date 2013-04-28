@@ -6,6 +6,7 @@ section.video {
 	padding-bottom: 56.25%;
 	padding-top: 25px;
 	height: 0;
+	z-index: 15;
 }
 
 section.video iframe {
@@ -16,6 +17,11 @@ section.video iframe {
 	height: 100%;
 }
 
+
+#character-select .flow {
+	position: relative;
+	top: -65px;
+}
 
 #character-select .caption {
 	color: #000;
