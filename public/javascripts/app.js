@@ -28,7 +28,10 @@ var App = App || null;
 		};
 		
 		this.initialize_video = function(url) {
-			//$('section.video video').attr('src', url);
+			var $video = $('<video src="' + url + '" controls>\
+				Your browser does not support the <code>video</code> element.\
+			</video>');
+			$('section.video').append($video);
 		};
 		
 		this.get_characters = function(series_id, params) {
