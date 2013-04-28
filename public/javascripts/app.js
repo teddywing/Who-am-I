@@ -28,7 +28,7 @@ var App = App || null;
 		};
 		
 		this.initialize_video = function(url) {
-			$('section.video video').attr('src', url);
+			//$('section.video video').attr('src', url);
 		};
 		
 		this.get_characters = function(series_id, params) {
