@@ -9,7 +9,7 @@ section.video {
 	z-index: 15;
 }
 
-section.video iframe {
+section.video video {
 	position: absolute;
 	top: 0;
 	left: 0;

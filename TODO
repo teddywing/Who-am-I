@@ -2,12 +2,12 @@ TODO
 ====
 
 v Get characters and images from the TMS API in my character-images.js route
-- Get video
-	- Connect to Parse API
+v Get video
+	v Connect to Parse API
 - Timer
-- Select a character
+v Select a character
 	- Points in Viggle
 v Push to Heroku
-- Change Coverflow library
+v Change Coverflow library
 - Make Leaderboard page
 - Make Rules page
