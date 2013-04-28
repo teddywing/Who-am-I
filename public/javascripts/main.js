@@ -11,7 +11,7 @@
 		
 		return cf;
 	};
-	initialise_content_flow();
+	// initialise_content_flow();
 
 	// Populate characters
 	
