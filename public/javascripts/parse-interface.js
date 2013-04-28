@@ -24,9 +24,9 @@ var ParseInterface = ParseInterface || null;
 			var video_url = contest_instance.get('video_url');
 			var series_id = contest_instance.get('series_id');
 			
-			App.answer = contest_instance.get('personId');
+			App.answer = contest_instance.get('person_id');
 			App.initialize_video(video_url);
-			App.get_characters(series_id);
+			App.get_characters(series_id, { answer_id: App.answer });
 		};
 		
 		

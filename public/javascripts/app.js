@@ -4,11 +4,12 @@ var App = App || null;
 	var cApp = function() {
 		this.characters = [];
 		this.answer = null;
+		this.answer_name = '';
 		this.playlist = []
 		
 		
 		// CoverFlow
-		var initialise_js_cover_flow = function(playlist) {
+		this.initialise_js_cover_flow = function(playlist) {
 			var that = this;
 			coverflow('character-select-container').setup({
 				width: '100%',
@@ -18,10 +19,10 @@ var App = App || null;
 			}).on('ready', function() {
 				var the_other = that;
 				this.on('click', function(e) {
-//					if (the_other.answer == 
-					console.log(e);
-					var selection = this.playlist[e];
-//					alert('chosen');
+					if (the_other.playlist[e].title == the_other.answer_name) {
+						// Answered correctly
+						the_other.correct_answer();
+					}
 				});
 			});
 		};
@@ -30,9 +31,12 @@ var App = App || null;
 			console.log(url);
 		};
 		
-		this.get_characters = function(series_id) {
+		this.get_characters = function(series_id, params) {
 			// Populate characters
 			var that = this;
+			var params = params || {
+				answer_id: -1
+			};
 			var $character_container = $('#character-select .flow');
 			$.get(
 				'/character-images/' + series_id,
@@ -51,10 +55,18 @@ var App = App || null;
 							personId: r.characters[i].tms_personId,
 							name: r.characters[i].name
 						});
+						
+						if (params.answer_id == r.characters[i].tms_personId) {
+							that.answer_name = r.characters[i].name;
+						}
 					}
-					initialise_js_cover_flow(that.playlist);
+					that.initialise_js_cover_flow(that.playlist);
 				}
 			);
+		};
+		
+		this.correct_answer = function() {
+			alert('chosen');
 		};
 		
 		
