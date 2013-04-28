@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta charset="utf-8">
+	<meta http-equiv="cache-control" content="no-cache" />
+	<title>Who Am I?</title>
+	<meta name="description" content="">
+
+	<meta name="viewport" content="width=device-width">
+	
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css" media="screen" />
+	
+	<script src="/javascripts/vendor/jquery-2.0.0.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<script src="http://www.parsecdn.com/js/parse-1.2.7.min.js"></script>
+	<script src="/javascripts/vendor/underscore-min.js"></script>
+</head>
+<body class="character-chosen-dialog">
+	<div role="main">
+		<div data-role="header">
+			<a href="#" data-rel="back" data-icon="delete" data-transition="slidedown">Close</a>
+			<h1></h1>
+		</div>
+		
+		<section id="character-chosen-content">
+			<% if (success === 'true') { %>
+				<h1>Congratulations you're right! You just won 1 million Viggle points!</h1>
+			<% } else { %>
+				<h1>Sorry, that wasn't the right character. Keep watching and you'll get it next time.</h1>
+				
+				<p>
+					The right one was:
+				</p>
+				
+				<p>
+					<b><%= character_name %></b>
+				</p>
+				
+				<p>
+					<img src="<%= character_image_url %>" alt="<%= character_name %>" height="150" />
+				</p>
+			<% } %>
+		</section>
+	</div>
+	
+	<script>
+		(function() {
+			$('div[data-role="page"]').css('background-color', '#ddd');
+			$('div[data-role="page"]').on('pagehide', function() {
+				$(this).css('background-color', '#000');
+			});
+			
+			$('a[data-rel="back"]').on('click', function() {
+				$('#character-chosen-dialog-button').remove();
+			});
+		})();
+	</script>
+</body>
+</html>

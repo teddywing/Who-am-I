@@ -5,6 +5,7 @@ var App = App || null;
 		this.characters = [];
 		this.answer = null;
 		this.answer_name = '';
+		this.answer_image_url = '';
 		this.playlist = []
 		
 		
@@ -21,7 +22,10 @@ var App = App || null;
 				this.on('click', function(e) {
 					if (the_other.playlist[e].title == the_other.answer_name) {
 						// Answered correctly
-						the_other.correct_answer();
+						the_other.pick_character({ correct: true });
+					}
+					else {
+						the_other.pick_character({ correct: false });
 					}
 				});
 			});
@@ -61,6 +65,7 @@ var App = App || null;
 						
 						if (params.answer_id == r.characters[i].tms_personId) {
 							that.answer_name = r.characters[i].name;
+							that.answer_image_url = r.characters[i].image
 						}
 					}
 					that.initialise_js_cover_flow(that.playlist);
@@ -68,8 +73,23 @@ var App = App || null;
 			);
 		};
 		
-		this.correct_answer = function() {
-			alert('chosen');
+		this.pick_character = function(params) {
+			var params = params || {
+				correct: false
+			};
+			
+			var $open_dialog_button = $('<a id="character-chosen-dialog-button" href="#" data-transition="slideup" style="display: none;"></a>');
+			$('body').append($open_dialog_button);
+			var $open_dialog_button_in_dom = $('#character-chosen-dialog-button');
+			
+			if (params.correct) {
+				$open_dialog_button_in_dom.attr('href', '/character-chosen/true');
+			}
+			else {
+				$open_dialog_button_in_dom.attr('href', '/character-chosen/false/?character_name=' + this.answer_name + '&character_image_url=' + this.answer_image_url);
+			}
+			
+			$open_dialog_button_in_dom.trigger('click');
 		};
 		
 		

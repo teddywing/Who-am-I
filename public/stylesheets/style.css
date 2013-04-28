@@ -1,6 +1,11 @@
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
 
 
+b {
+	font-weight: bold;
+}
+
+
 section.video {
 	position: relative;
 	padding-bottom: 56.25%;
@@ -33,6 +38,33 @@ footer {
 	bottom: 0;
 	width: 100%;
 	z-index: 1000;
+}
+
+
+/* Character Chosen dialog */
+/*
+body.character-chosen-dialog .ui-body-c {
+	background-color: #ddd;
+}
+*/
+
+#character-chosen-content {
+	width: 95%;
+	margin: 0 auto;
+	position: relative;
+	top: 2em;
+}
+
+#character-chosen-content h1 {
+	font-size: 2em;
+	font-weight: bold;
+	line-height: 1.2em;
+	text-align: center;
+}
+
+#character-chosen-content p {
+	margin-top: 1em;
+	text-align: center;
 }
 
 
