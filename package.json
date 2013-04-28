@@ -6,7 +6,6 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "node": "0.8.x",
 	"express": "3.2.0",
     "ejs": "*",
 	"request": "2.20.x"
