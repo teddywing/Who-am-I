@@ -4,7 +4,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 section.video {
 	position: relative;
 	padding-bottom: 56.25%;
-	padding-top: 25px;
+	padding-top: 0px;
 	height: 0;
 	z-index: 15;
 }
