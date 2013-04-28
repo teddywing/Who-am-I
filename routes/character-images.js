@@ -42,7 +42,8 @@ module.exports = function(req, res) {
 				
 				that.data.character_images.characters.push({
 					image: 'http://developer.tmsimg.com/' + r.preferredImage.uri + '?api_key=' + config.tms.key + '&amp;h=100',
-					name: r.preferredImage.caption.content
+					name: r.preferredImage.caption.content,
+					tms_personId: r.personId
 				});
 				
 				callback();
