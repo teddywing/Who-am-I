@@ -41,7 +41,7 @@ module.exports = function(req, res) {
 				var r = JSON.parse(body);
 				
 				that.data.character_images.characters.push({
-					image: r.preferredImage.uri + '?api_key=' + config.tms.key,
+					image: 'http://developer.tmsimg.com/' + r.preferredImage.uri + '?api_key=' + config.tms.key + '&amp;h=100',
 					name: r.preferredImage.caption.content
 				});
 				

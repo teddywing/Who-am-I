@@ -1,17 +1,17 @@
 // CoverFlow
 (function() {
-	var initialise_content_flow = function() {
-		var cf = new ContentFlow('character-select', {
-			reflectionColor: "#000000",
-		
-			onclickActiveItem: function(item) {
-				alert('hello');
-			}
+	var initialise_js_cover_flow = function(playlist) {
+		coverflow('character-select-container').setup({
+			width: '100%',
+			playlist: playlist,
+			coverheight: 200,
+			textoffset: 30
+		}).on('ready', function() {
+			this.on('click', function() {
+				alert('chosen');
+			});
 		});
-		
-		return cf;
 	};
-	// initialise_content_flow();
 
 	// Populate characters
 	
@@ -21,7 +21,6 @@
 	};
 	
 	var $character_container = $('#character-select .flow');
-	var character_template = _.template($('#character-image-template').html());
 	$.get(
 		'/character-images/8680539',
 		function(response) {
@@ -29,9 +28,14 @@
 			
 			$character_container.empty()
 			
+			var playlist = []
 			for (var i = 0; i < r.characters.length; i++) {
-				$character_container.append(character_template(r.characters[i]));
+				playlist.push({
+					image: r.characters[i].image,
+					title: r.characters[i].name
+				});
 			}
+			initialise_js_cover_flow(playlist);
 		}
 	);
 })();

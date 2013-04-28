@@ -7,7 +7,7 @@ v Get characters and images from the TMS API in my character-images.js route
 - Timer
 - Select a character
 	- Points in Viggle
-- Push to Heroku
+v Push to Heroku
 - Change Coverflow library
 - Make Leaderboard page
 - Make Rules page

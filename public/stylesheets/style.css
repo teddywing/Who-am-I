@@ -28,3 +28,11 @@ footer {
 	width: 100%;
 	z-index: 1000;
 }
+
+
+/* jQuery Mobile overrides */
+
+.ui-body-c {
+	background: #000;
+	text-shadow: none;
+}

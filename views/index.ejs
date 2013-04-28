@@ -9,10 +9,11 @@
 
 	<meta name="viewport" content="width=device-width">
 	
-	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css" media="screen" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+	<link rel="stylesheet" href="/javascripts/vendor/js-cover-flow/coverflow.css" />
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css" media="screen" />
 	
-	<script src="/javascripts/vendor/ContentFlow/contentflow.js"></script>
+	<script src="/javascripts/vendor/js-cover-flow/coverflow.js"></script>
 	<script src="/javascripts/vendor/jquery-2.0.0.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
 	<script src="/javascripts/vendor/underscore-min.js"></script>
@@ -26,7 +27,7 @@
 		<section id="character-select">
 			<div class="loadIndicator"><div class="indicator"></div></div>
 			
-			<div class="flow">
+			<div class="flow" id="character-select-container">
 				
 			</div>
 			
@@ -46,12 +47,6 @@
 		</div>
 	</footer>
 	
-	<script type="text/template" id="character-image-template">
-		<div class="item">
-			<img class="content" src="http://developer.tmsimg.com/{{ image }}" alt="{{ name }}" />
-			<div class="caption">{{ name }}</div>
-		</div>
-	</script>
 	<script src="/javascripts/main.js"></script>
 </body>
 </html>
