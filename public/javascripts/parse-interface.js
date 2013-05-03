@@ -2,8 +2,8 @@ var ParseInterface = ParseInterface || null;
 
 (function() {
 	var cParseInterface = function() {
-		var application_id = '6jaGjImHFtbJLkAWJRnnLTHfD01nmWHAIrAKNYge';
-		var javascript_key = 'zA6og358R2Wg5NVAHWj81zeFz2WQZ5u2AhHFPCjN';
+		var application_id = Config.parse.application_id;
+		var javascript_key = Config.parse.javascript_key;
 		Parse.initialize(application_id, javascript_key);
 	
 		var ContestObject = Parse.Object.extend('ContestObject');

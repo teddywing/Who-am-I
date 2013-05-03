@@ -44,6 +44,14 @@
 		</div>
 	</footer>
 	
+	<script>
+		var Config = {
+			parse: {
+				application_id: '<%= config.parse.application_id %>',
+				javascript_key: '<%= config.parse.javascript_key %>'
+			}
+		};
+	</script>
 	<script src="/javascripts/app.js"></script>
 	<script src="/javascripts/parse-interface.js"></script>
 	<script src="/javascripts/viggle.js"></script>
